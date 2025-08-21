@@ -1,0 +1,67 @@
+# 🌸 Iris Flower Classification
+
+A simple **machine learning project** that classifies iris flowers into three species (**Setosa, Versicolor, Virginica**) using **Support Vector Machines (SVM)** and a **Streamlit web app** for interactive predictions.
+
+---
+
+## 📂 Project Structure
+
+Iris Flower Classification/
+│── app/
+│ └── main.py # Streamlit app (UI for predictions)
+│
+│── models/
+│ ├── svm_model.pkl # Trained SVM model
+│ └── scaler.pkl # StandardScaler for preprocessing
+│
+│── src/
+│ ├── train.py # Script to train and save model
+│ └── predict.py # Script for quick CLI predictions
+│
+│── requirements.txt # Python dependencies
+│── README.md # Project documentation
+
+## Create a virtual environment
+
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+
+## Install dependencies
+
+pip install -r requirements.txt
+
+## Run Streamlit App (UI)
+
+1. streamlit run app/main.py
+
+## 📊 Dataset
+
+This project uses the famous Iris dataset
+, containing 150 samples with 4 features:
+
+Sepal length (cm)
+Sepal width (cm)
+Petal length (cm)
+Petal width (cm)
+
+## Target species:
+
+0 → Setosa
+1 → Versicolor
+2 → Virginica
+
+## How It Works
+
+1. Data Loading – Iris dataset from sklearn.datasets.
+2. Preprocessing – Features are scaled with StandardScaler.
+3. Model Training – SVM classifier (SVC) is trained.
+4. Evaluation – Accuracy checked on a test split.
+5. Deployment – Saved model + scaler are loaded in Streamlit for live predictions.
+
+##🚀 Future Improvements
+
+1. Train with larger datasets for robustness.
+2. Experiment with Decision Trees, Random Forest, or Neural Networks.
+3. Deploy app on Streamlit Cloud / Heroku / AWS.
+4. Add reset button in UI for quick input clearing.
